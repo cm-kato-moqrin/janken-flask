@@ -1,0 +1,13 @@
+{% extends 'base.html' %} 
+
+{% block h2 %}
+{% block title %}<strong>結果:</strong>{% endblock %}
+{% endblock %} 
+
+{% block content %}
+<strong>{{ janken_result }}</strong>
+<p>あなた: {{ client_hand }}</p>
+<p>わたし: {{ pc_hand }}</p>
+
+<p><a href="/">戻る</a></p>
+{% endblock %}

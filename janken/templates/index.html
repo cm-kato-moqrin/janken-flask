@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% block h2%} {% block title %}<strong>あなたの選択:</strong>{% endblock%} 
+{% endblock %} {% block content %}
+<form method="post">
+<div class="field">
+      <div class="field">
+        <div class="control">
+            <label class="radio">
+            <input type="radio" name="hand" value="グー" checked /> グー</label>
+            <label class="radio"><input type="radio" name="hand" value="チョキ" /> チョキ</label>
+            <label class="radio"><input type="radio" name="hand" value="パー" /> パー</label>
+        </div>
+      </div>
+      
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">決定</button>
+        </div>
+        </div>
+</div>
+</form>
+{% endblock %}
