@@ -51,7 +51,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python janken/janken.py test
+            pycodestyle janken/janken.py test
 
       - store_artifacts:
           path: test-reports
