@@ -48,6 +48,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
+            sudo chmod 755 janken/janken.py
             python janken/janken.py test
 
       - store_artifacts:
