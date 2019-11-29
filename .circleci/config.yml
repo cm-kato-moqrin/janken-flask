@@ -19,6 +19,8 @@ jobs:
 
     steps:
       - checkout
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.7/site-packages
 
       # Download and cache dependencies
       - restore_cache:
@@ -48,7 +50,6 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            sudo chmod 755 janken/janken.py
             python janken/janken.py test
 
       - store_artifacts:
